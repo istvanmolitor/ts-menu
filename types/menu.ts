@@ -21,8 +21,11 @@ export interface MenuItemConfig {
   /** Display order (lower numbers appear first) */
   order?: number
 
-  /** Required permission to view this menu item (optional) */
-  permission?: string
+  /** Required permission or permissions to view this menu item (optional) */
+  permission?: string | string[]
+
+  /** Alternative field for declaring multiple required permissions */
+  permissions?: string[]
 
   /** Additional metadata */
   meta?: Record<string, any>
